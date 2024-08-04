@@ -1,0 +1,132 @@
+.container{
+    display: flex;
+}
+
+.dashboard{
+    position: relative;
+    width:100%;
+    z-index:0;
+}
+
+.topBaseGradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20rem;
+    overflow: hidden;
+    z-index: -1;
+}
+.topBaseGradient>:nth-child(2){
+    left: 40%;
+}
+.topBaseGradient>:nth-child(3){
+    right: 0;
+}
+
+.header{
+    display: flex;
+    padding: 2rem 4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.header>:nth-child(1){
+    font-size: 1.2rem;
+}
+.searchBar {
+    background-color: rgba(255, 255, 255, 0.3); /* More transparent background */
+    width: 30%;
+    max-width: 25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(43, 43, 134, 0.5); /* More subtle border */
+    justify-content: flex-start;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.searchBar:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Slightly less transparent on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.searchBar input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white; /* White text for better readability */
+    width: 100%;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
+.searchBar input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* White placeholder text */
+    font-size: 1rem;
+}
+
+.searchBar svg {
+    color: rgba(255, 255, 255, 0.7); /* White icon */
+    transition: color 0.3s ease;
+}
+
+.searchBar:hover svg {
+    color: white;
+}
+
+.profile{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile>img{
+   width: 60px;
+   height: 70px;
+   border-radius: 50px;
+   border: 2px solid rgb(197, 197, 197);
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.details>:nth-child(1){
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.content {
+    margin: auto;
+    display: flex;
+    flex-direction: column; /* Allow content to stack vertically */
+    height: calc(100vh - 8rem); /* Adjust height as needed, accounting for header/footer */
+    overflow-y: auto; /* Add vertical scrollbar when content overflows */
+    padding: 1rem; /* Optional: Add padding inside the content area */
+}
+
+.content>div{
+    width: 100%;
+    min-width: 75vh;
+}
+
+.content::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar color */
+    border-radius: 10px; /* Rounded corners for the scrollbar */
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color when hovered */
+}
